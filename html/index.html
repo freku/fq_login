@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pl" dir="ltr">
+<head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="styles.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id='main' class="cont">
+        <div class="main-box">
+            <div id='register' style='display: none;'>
+                <div class="logo">
+                    RAGEKILL.PL
+                    <p class="small-info">> REGISTER <</p>
+                </div>
+
+                <div class="input-box">
+                    <div class='input-with-title'>
+                        <p>Login:</p>
+                        <input type="text" id="r_login" class='input-el'>
+
+                        <div class='error-info-box er-login'>
+                            <ul>
+                                <li id='er-correct-letters-l'>Tylko litery i cyfry</li>
+                                <li id='er-correct-len-l'>Od 6 do 15 znakow</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class='input-with-title'>
+                        <p>Email (optional):</p>
+                        <p class='small-info'>Without one you can't restore your password</p>
+                        <input type="email" id="r_email" class='input-el'>
+
+                        <div class='error-info-box er-email'>
+                            <ul>
+                                <li id='er-corrent-form-e'>Poprawny e-mail</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class='input-with-title '>
+                        <p>Password:</p>
+                        <input type="password" id="r_password1" class='input-el'>
+
+                        <div class='error-info-box er-password'>
+                            <ul>
+                                <li id='er-correct-len-p'>Od 8 do 32 znakow</li>
+                                <li id='er-same-strings-p'>Oba hasla takie same</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class='input-with-title'>
+                        <p>Repeat password:</p>
+                        <input type="password" id="r_password2" class='input-el'>
+                    </div>
+                    <div class="bottom-links">
+                        <a href="#" class='login-click' style='font-size: 14px;'>Log in</a>
+                        <a href="#" class='forgot-pw-click'>Forgot your password?</a>
+                    </div>
+                    <p class='error-box'></p>
+                    <button class="sub-btn" id='reg-btn'>Register NOW!</button>
+                    
+                </div>
+            </div>
+            
+            <div id='login' >
+                <div class="logo">
+                    RAGEKILL.PL
+                    <p class="small-info">> LOGIN <</p>
+                </div>
+
+                <div class="input-box">
+                    <p class='error-box'></p>
+
+                    <p>Login:</p>
+                    <input type="text" id="l_login" class='input-el'>
+                    <p>Password:</p>
+                    <input type="password" id="l_password" class='input-el'>
+                    <p>Język / Language: </p>
+                    
+                    <div class='lang-box'>
+                        <div>
+                            <input type="checkbox" id="lang1" checked> <img src="poland.png">
+                        </div>
+                        <div>
+                            <input type="checkbox" id="lang2"> <img src="usa.png">
+                        </div>
+                    </div>
+
+                    <div class="bottom-links">
+                        <a href="#" class='register-click' style='font-size: 14px;' >Sign up</a>
+                        <a href="#" class='forgot-pw-click'>Forgot your password?</a>
+                    </div>
+                    <button class="sub-btn" id='log-btn'>Log in</button>
+                </div>
+            </div>
+
+            <div id='email' style='display: none;'>
+                <div class="logo">
+                    RAGEKILL.PL
+                    <p class="small-info">> PASSWORD RESTORATION <</p>
+                </div>
+
+                <div class="input-box">
+                    <p>Email:</p>
+                    <input type="email" id="e_login" class='input-el'>
+                    <div class="bottom-links">
+                        <a href="#" class='login-click' style='font-size: 14px;'>Log in</a>
+                    </div>
+                    <p class='error-box'></p>
+                    <button class="sub-btn" id='change-btn'>Change password!</button>
+                </div>
+            </div>
+
+            <div class='loading-screen'>
+                <img src="l_icon.gif" class='ls-gif'>
+                <img src="question.png" class='ls-response'>
+                <p class='ls-info'>Waiting for server to answer..</p>
+                <button class='ls-close-btn' id='ls-clse-btn'>Potwierdz</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
